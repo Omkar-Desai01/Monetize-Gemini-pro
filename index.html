@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monetizing Your Gemini Pro Subscription</title>
+    <meta name="description" content="Discover and compare the best ways to monetize your Gemini Pro subscription. Explore business models, income potential, and actionable strategies in this interactive dashboard.">
+    <meta name="keywords" content="Gemini Pro, Monetization, AI, Business Models, Income, Digital Products, Consulting, Content Creation, Freelance, SaaS, Prompt Engineering, Google AI">
+    <meta name="author" content="Interactive Insights">
+    <meta property="og:title" content="Monetizing Your Gemini Pro Subscription">
+    <meta property="og:description" content="Discover and compare the best ways to monetize your Gemini Pro subscription. Explore business models, income potential, and actionable strategies in this interactive dashboard.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourdomain.com/">
+    <meta property="og:image" content="https://yourdomain.com/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Monetizing Your Gemini Pro Subscription">
+    <meta name="twitter:description" content="Discover and compare the best ways to monetize your Gemini Pro subscription. Explore business models, income potential, and actionable strategies in this interactive dashboard.">
+    <meta name="twitter:image" content="https://yourdomain.com/og-image.png">
+    <link rel="canonical" href="https://yourdomain.com/">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230ea5e9'/%3E%3Ctext x='32' y='42' font-size='32' text-anchor='middle' fill='white' font-family='Inter,sans-serif'%3E%F0%9F%94%A5%3C/text%3E%3C/svg%3E">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f0fdfa 0%, #f5f5f4 100%);
+        }
+        .chart-container, .opportunity-chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 450px;
+        }
+        @media (min-width: 768px) {
+            .chart-container, .opportunity-chart-container {
+                height: 400px;
+                max-height: 500px;
+            }
+        }
+        .nav-link {
+            transition: color 0.3s, border-bottom 0.3s;
+            border-bottom: 2px solid transparent;
+        }
+        .nav-link:hover, .nav-link:focus {
+            color: #0ea5e9;
+            border-bottom: 2px solid #0ea5e9;
+            outline: none;
+        }
+        .category-button.active {
+            background: linear-gradient(90deg, #0ea5e9 0%, #14b8a6 100%);
+            color: white;
+            box-shadow: 0 4px 12px 0 rgb(20 184 166 / 0.15);
+        }
+        .category-button {
+            transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+        }
+        .category-button:not(.active):hover {
+            background: #f0fdfa;
+            color: #0ea5e9;
+        }
+        .details-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.4,0,0.2,1);
+        }
+        .details-content.open {
+            max-height: 500px;
+        }
+        .card-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #0ea5e9 0%, #14b8a6 100%);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 9999px;
+            padding: 0.25rem 0.75rem;
+            margin-left: 0.5rem;
+        }
+        .card-icon {
+            font-size: 2rem;
+            margin-right: 0.5rem;
+        }
+        .section-divider {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, #0ea5e9 0%, #14b8a6 100%);
+            opacity: 0.12;
+            margin: 3rem 0 2rem 0;
+            border-radius: 1rem;
+        }
+        .glass {
+            background: rgba(255,255,255,0.7);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 1.5rem;
+        }
+    </style>
+</head>
+
+<body class="text-stone-800">
+    <header class="glass sticky top-0 z-50 shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <span class="text-3xl font-extrabold text-teal-600">★</span>
+                <h1 class="text-2xl md:text-3xl font-extrabold text-stone-900 tracking-tight">Gemini Pro Monetization</h1>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-stone-600 font-medium">
+                <a href="#overview" class="nav-link">Overview</a>
+                <a href="#explorer" class="nav-link">Explorer</a>
+                <a href="#matrix" class="nav-link">Opportunity Matrix</a>
+                <a href="#resources" class="nav-link">Resources</a>
+            </div>
+            <div class="md:hidden">
+                <select id="mobile-nav" class="bg-stone-100 border border-stone-300 rounded-lg p-2 shadow-sm focus:ring-2 focus:ring-teal-400">
+                    <option value="#overview">Overview</option>
+                    <option value="#explorer">Explorer</option>
+                    <option value="#matrix">Matrix</option>
+                    <option value="#resources">Resources</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 md:px-8 py-8 md:py-14">
+        <section id="overview" class="mb-20 scroll-mt-24">
+            <div class="text-center mb-14">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-stone-900 mb-4 tracking-tight">Maximize Your Gemini Pro Investment</h2>
+                <p class="max-w-3xl mx-auto text-stone-600 text-lg">
+                    This interactive guide is designed to help you discover and evaluate the diverse monetization opportunities available with a Gemini Pro subscription. We've analyzed various business models and categorized them to simplify your exploration. Use the charts and tools below to identify pathways that align with your skills, resources, and financial goals.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="glass p-8 rounded-2xl shadow-lg">
+                    <h3 class="font-bold text-2xl mb-6 text-stone-800">Key Insights at a Glance</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <span class="text-teal-500 mr-4 mt-1 text-2xl">✓</span>
+                            <div>
+                                <h4 class="font-semibold text-lg">Diverse Income Streams</h4>
+                                <p class="text-stone-600 text-base">Over 15 distinct methods identified, ranging from direct client work to scalable digital products.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-teal-500 mr-4 mt-1 text-2xl">✓</span>
+                            <div>
+                                <h4 class="font-semibold text-lg">Variable Entry Barriers</h4>
+                                <p class="text-stone-600 text-base">Opportunities exist for all skill levels, from beginners to seasoned professionals and developers.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-teal-500 mr-4 mt-1 text-2xl">✓</span>
+                            <div>
+                                <h4 class="font-semibold text-lg">High ROI Potential</h4>
+                                <p class="text-stone-600 text-base">Strategic application can yield a significant return on your subscription investment, with some pathways offering rapid income generation.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="glass p-8 rounded-2xl shadow-lg">
+                    <h3 class="font-bold text-2xl mb-6 text-center text-stone-800">Opportunity Categories</h3>
+                    <div class="chart-container">
+                        <canvas id="categoriesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section-divider"></div>
+        <section id="explorer" class="mb-20 scroll-mt-24">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-stone-900 mb-4 tracking-tight">Monetization Method Explorer</h2>
+                <p class="max-w-3xl mx-auto text-stone-600 text-lg">
+                    Here, you can dive into the specifics of each monetization category. Select a category to reveal the various methods within it. Each card provides a brief overview, an estimate of income potential, and the required skill level to help you find your perfect fit. Click on any card to expand for more details.
+                </p>
+            </div>
+            <div id="category-filters" class="flex flex-wrap justify-center gap-3 md:gap-5 mb-10"></div>
+            <div id="methods-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </section>
+        <div class="section-divider"></div>
+        <section id="matrix" class="mb-20 scroll-mt-24">
+            <div class="text-center mb-14">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-stone-900 mb-4 tracking-tight">Opportunity Matrix</h2>
+                <p class="max-w-3xl mx-auto text-stone-600 text-lg">
+                    Visualizing data can reveal insights that text alone cannot. The charts in this section help you compare different monetization methods across key metrics like effort, potential income, and time to profitability. Use these visuals to strategically select opportunities that offer the best return for your personal circumstances.
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-10">
+                <div class="glass p-8 rounded-2xl shadow-lg">
+                    <h3 class="font-bold text-2xl mb-2 text-stone-800">Effort vs. Potential Income</h3>
+                    <p class="text-base text-stone-500 mb-4">Hover over points to see details. The ideal quadrant is top-left (High Potential, Low Effort).</p>
+                    <div class="opportunity-chart-container">
+                        <canvas id="opportunityMatrixChart"></canvas>
+                    </div>
+                </div>
+                <div class="glass p-8 rounded-2xl shadow-lg">
+                    <h3 class="font-bold text-2xl mb-2 text-stone-800">Average Time to First $100</h3>
+                    <p class="text-base text-stone-500 mb-4">An estimate of how quickly you could start earning.</p>
+                    <div class="opportunity-chart-container">
+                        <canvas id="timeToIncomeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section-divider"></div>
+        <section id="resources" class="scroll-mt-24">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-stone-900 mb-4 tracking-tight">Resources & Next Steps</h2>
+                <p class="max-w-3xl mx-auto text-stone-600 text-lg">
+                    Your journey doesn't end here. The key to success is continuous learning and application. Below are some resources to help you build the necessary skills and find platforms to offer your services. Start small, build a portfolio, and scale your efforts.
+                </p>
+            </div>
+            <div class="max-w-4xl mx-auto glass p-8 md:p-10 rounded-2xl shadow-lg">
+                <ul class="space-y-6">
+                    <li><strong class="text-teal-700">Prompt Engineering:</strong> Search for "Prompt Engineering Guides" and "Advanced Prompting Techniques" to master your ability to get the best results from Gemini.</li>
+                    <li><strong class="text-teal-700">Freelance Platforms:</strong> Explore sites like Upwork, Fiverr, and Toptal to find clients for writing, coding, and consulting services.</li>
+                    <li><strong class="text-teal-700">API & Development:</strong> If you're technically inclined, visit the Google AI for Developers website to learn about the Gemini API and start building applications.</li>
+                    <li><strong class="text-teal-700">Content Platforms:</strong> Consider starting a blog on Medium, a newsletter on Substack, or a YouTube channel to build an audience around your AI expertise.</li>
+                </ul>
+                <p class="mt-8 text-center text-stone-600 italic text-lg">The most successful strategy is the one you can consistently execute. Good luck!</p>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-stone-200 mt-20">
+        <div class="container mx-auto px-6 py-6 text-center text-stone-500 text-base">
+            <p>&copy; 2025 Interactive Insights. This guide is for informational purposes only.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const DATA = {
+                categories: [
+                    { id: 'services', name: 'Direct Client Services', percentage: 40 },
+                    { id: 'products', name: 'Digital Products', percentage: 25 },
+                    { id: 'consulting', name: 'Consulting & Strategy', percentage: 20 },
+                    { id: 'content', name: 'Content & Media', percentage: 15 },
+                ],
+                methods: [
+                    { id: 1, category: 'services', name: 'AI-Powered Copywriting', income: '$$', skill: 'Beginner', effort: 3, potential: 6, time: 2, details: 'Use Gemini to draft, refine, and edit marketing copy, blog posts, social media updates, and website content for clients. Fast turnaround times are a key selling point.' },
+                    { id: 2, category: 'services', name: 'Code Generation & Debugging', income: '$$$', skill: 'Intermediate', effort: 5, potential: 8, time: 3, details: 'Assist developers by generating boilerplate code, writing functions, translating code between languages, and identifying bugs. Requires programming knowledge.' },
+                    { id: 3, category: 'services', name: 'Research & Summarization', income: '$$', skill: 'Beginner', effort: 2, potential: 5, time: 1, details: 'Offer services to researchers, students, and businesses by quickly summarizing long documents, academic papers, and market reports.' },
+                    { id: 4, category: 'services', name: 'Translation Services', income: '$$', skill: 'Intermediate', effort: 4, potential: 6, time: 3, details: 'Use Gemini for initial translation drafts and then apply your language expertise for nuanced, high-quality localization. Requires fluency in at least two languages.' },
+                    { id: 5, category: 'products', name: 'Niche Prompt Packs', income: '$', skill: 'Beginner', effort: 2, potential: 4, time: 4, details: 'Create and sell curated collections of high-quality prompts for specific industries or tasks (e.g., "Prompts for Real Estate Agents").' },
+                    { id: 6, category: 'products', name: 'Specialized AI Tools (via API)', income: '$$$', skill: 'Advanced', effort: 9, potential: 10, time: 8, details: 'Build and sell a SaaS or micro-app that uses the Gemini API to solve a specific problem, like a legal clause generator or a personalized workout planner.' },
+                    { id: 7, category: 'products', name: 'Online Course on AI Usage', income: '$$', skill: 'Intermediate', effort: 6, potential: 7, time: 6, details: 'Develop and sell a course teaching others how to effectively use Gemini Pro for their business or creative projects. Requires subject matter expertise and marketing.' },
+                    { id: 8, category: 'consulting', name: 'AI Integration Consulting', income: '$$$$', skill: 'Advanced', effort: 8, potential: 9, time: 7, details: 'Advise small to medium businesses on how to integrate AI into their existing workflows to improve efficiency and cut costs. Requires business acumen.' },
+                    { id: 9, category: 'consulting', name: 'Workflow Automation Services', income: '$$$', skill: 'Intermediate', effort: 7, potential: 8, time: 5, details: 'Design and implement automated workflows for clients using Gemini in conjunction with tools like Zapier or Make.com.' },
+                    { id: 10, category: 'content', name: 'AI-Focused YouTube/Blog', income: '$$', skill: 'Beginner', effort: 5, potential: 7, time: 9, details: 'Create content reviewing AI tools, demonstrating advanced techniques, and discussing the future of AI. Monetize through ads, sponsorships, and affiliate links.' },
+                    { id: 11, category: 'content', name: 'AI-Generated Art/Music', income: '$', skill: 'Intermediate', effort: 4, potential: 5, time: 5, details: 'Use AI tools (potentially prompted by Gemini) to generate unique art, music, or stories and sell them on platforms like Etsy or as NFTs.' },
+                    { id: 12, category: 'consulting', name: 'Prompt Engineering Services', income: '$$$', skill: 'Intermediate', effort: 6, potential: 8, time: 4, details: 'Work directly with companies to design, test, and optimize the prompts they use for their internal AI systems and customer-facing chatbots.' },
+                ]
+            };
+            const colors = {
+                teal: 'rgba(20, 184, 166, 1)',
+                stone: 'rgba(120, 113, 108, 1)',
+                sky: 'rgba(56, 189, 248, 1)',
+                amber: 'rgba(245, 158, 11, 1)',
+                rose: 'rgba(244, 63, 94, 1)'
+            };
+            const chartColors = [colors.teal, colors.sky, colors.amber, colors.rose, colors.stone];
+            const methodIcons = {
+                'AI-Powered Copywriting': '📝',
+                'Code Generation & Debugging': '💻',
+                'Research & Summarization': '🔍',
+                'Translation Services': '🌐',
+                'Niche Prompt Packs': '📦',
+                'Specialized AI Tools (via API)': '🛠️',
+                'Online Course on AI Usage': '🎓',
+                'AI Integration Consulting': '🤝',
+                'Workflow Automation Services': '⚙️',
+                'AI-Focused YouTube/Blog': '📹',
+                'AI-Generated Art/Music': '🎨',
+                'Prompt Engineering Services': '🧩',
+            };
+            const renderMethods = (category) => {
+                const grid = document.getElementById('methods-grid');
+                grid.innerHTML = '';
+                const methodsToRender = category === 'all' ? DATA.methods : DATA.methods.filter(m => m.category === category);
+                methodsToRender.forEach(method => {
+                    const card = document.createElement('div');
+                    card.className = 'glass bg-white rounded-2xl shadow-lg p-6 cursor-pointer transform hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 border border-stone-100';
+                    card.setAttribute('tabindex', '0');
+                    card.setAttribute('role', 'button');
+                    card.setAttribute('aria-expanded', 'false');
+                    card.innerHTML = `
+                        <div class="flex justify-between items-start mb-2">
+                            <div class="flex items-center">
+                                <span class="card-icon">${methodIcons[method.name] || '💡'}</span>
+                                <h4 class="font-bold text-lg text-stone-800">${method.name}</h4>
+                                <span class="card-badge ml-2">${method.category.charAt(0).toUpperCase() + method.category.slice(1)}</span>
+                            </div>
+                            <span class="text-2xl" title="Income Potential">${method.income.split('').map(() => '💰').join('')}</span>
+                        </div>
+                        <div class="flex flex-wrap items-center space-x-4 text-sm text-stone-500 mb-2">
+                            <span><strong>Skill:</strong> ${method.skill}</span>
+                            <span><strong>Effort:</strong> ${method.effort}/10</span>
+                            <span><strong>Potential:</strong> ${method.potential}/10</span>
+                            <span><strong>Time:</strong> ${method.time}/10</span>
+                        </div>
+                        <div class="details-content">
+                            <p class="text-stone-600 mt-2 pt-3 border-t border-stone-200">${method.details}</p>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                    card.addEventListener('click', () => {
+                        const content = card.querySelector('.details-content');
+                        content.classList.toggle('open');
+                        card.setAttribute('aria-expanded', content.classList.contains('open'));
+                    });
+                    card.addEventListener('keydown', (e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            card.click();
+                        }
+                    });
+                });
+            };
+            const renderCategoryFilters = () => {
+                const filtersContainer = document.getElementById('category-filters');
+                filtersContainer.innerHTML = '';
+                const allButton = document.createElement('button');
+                allButton.textContent = 'All';
+                allButton.className = 'category-button active px-5 py-2 text-base font-semibold rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-400';
+                allButton.dataset.category = 'all';
+                filtersContainer.appendChild(allButton);
+                DATA.categories.forEach(cat => {
+                    const button = document.createElement('button');
+                    button.textContent = cat.name;
+                    button.dataset.category = cat.id;
+                    button.className = 'category-button px-5 py-2 text-base font-semibold rounded-full shadow-sm bg-white focus:outline-none focus:ring-2 focus:ring-teal-400';
+                    filtersContainer.appendChild(button);
+                });
+                filtersContainer.addEventListener('click', (e) => {
+                    if (e.target.tagName === 'BUTTON') {
+                        filtersContainer.querySelectorAll('.category-button').forEach(btn => btn.classList.remove('active'));
+                        e.target.classList.add('active');
+                        renderMethods(e.target.dataset.category);
+                    }
+                });
+            };
+            const initCategoriesChart = () => {
+                const ctx = document.getElementById('categoriesChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: DATA.categories.map(c => c.name),
+                        datasets: [{
+                            data: DATA.categories.map(c => c.percentage),
+                            backgroundColor: chartColors,
+                            borderColor: '#f5f5f4',
+                            borderWidth: 4,
+                            hoverBorderColor: '#ffffff',
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        cutout: '65%',
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: {
+                                    font: { size: 14 },
+                                    padding: 24,
+                                    boxWidth: 16,
+                                    usePointStyle: true,
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return `${context.label}: ${context.raw}%`;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                });
+            };
+            const initOpportunityMatrixChart = () => {
+                const ctx = document.getElementById('opportunityMatrixChart').getContext('2d');
+                const categoryColorMap = {
+                    services: colors.teal,
+                    products: colors.sky,
+                    consulting: colors.amber,
+                    content: colors.rose
+                };
+                const chartData = {
+                    datasets: DATA.methods.map(method => ({
+                        label: method.name,
+                        data: [{
+                            x: method.effort,
+                            y: method.potential,
+                        }],
+                        backgroundColor: categoryColorMap[method.category] + 'B3',
+                        borderColor: categoryColorMap[method.category],
+                        borderWidth: 2,
+                        pointRadius: 10,
+                        pointHoverRadius: 14
+                    }))
+                };
+                new Chart(ctx, {
+                    type: 'scatter',
+                    data: chartData,
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function (context) {
+                                        return context.dataset.label;
+                                    },
+                                    afterLabel: function (context) {
+                                        return `Effort: ${context.parsed.x}, Potential: ${context.parsed.y}`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Effort / Skill Required (1-10)',
+                                    font: { size: 14 }
+                                },
+                                min: 0,
+                                max: 10,
+                                grid: { color: 'rgba(14,165,233,0.08)' }
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Potential Income (1-10)',
+                                    font: { size: 14 }
+                                },
+                                min: 0,
+                                max: 10,
+                                grid: { color: 'rgba(14,165,233,0.08)' }
+                            }
+                        }
+                    }
+                });
+            };
+            const initTimeToIncomeChart = () => {
+                const ctx = document.getElementById('timeToIncomeChart').getContext('2d');
+                const sortedData = [...DATA.methods].sort((a, b) => a.time - b.time);
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: sortedData.map(d => d.name),
+                        datasets: [{
+                            label: 'Time to First $100 (Lower is Faster)',
+                            data: sortedData.map(d => d.time),
+                            backgroundColor: chartColors[0] + 'B3',
+                            borderColor: chartColors[0],
+                            borderWidth: 1,
+                            borderRadius: 8,
+                            maxBarThickness: 32
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false,
+                            }
+                        },
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                title: {
+                                    display: true,
+                                    text: 'Relative Time (Lower is Faster)',
+                                    font: { size: 14 }
+                                },
+                                grid: { color: 'rgba(14,165,233,0.08)' }
+                            },
+                            y: {
+                                ticks: {
+                                    font: {
+                                        size: 12
+                                    }
+                                },
+                                grid: { color: 'rgba(14,165,233,0.08)' }
+                            }
+                        }
+                    }
+                });
+            };
+            const initMobileNav = () => {
+                const select = document.getElementById('mobile-nav');
+                select.addEventListener('change', (e) => {
+                    const targetId = e.target.value;
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            };
+            renderCategoryFilters();
+            renderMethods('all');
+            initCategoriesChart();
+            initOpportunityMatrixChart();
+            initTimeToIncomeChart();
+            initMobileNav();
+        });
+    </script>
+</body>
+</html>
